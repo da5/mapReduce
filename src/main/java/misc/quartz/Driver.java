@@ -13,10 +13,6 @@ public class Driver {
 
     private static final String jobId = "demo-job1";
     public static void main(String[] args) throws Exception{
-//        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Beans.xml");
-//        DemoJob instance = (DemoJob)applicationContext.getBean("demoJob");
-//        System.out.print("Hello " + instance.getDemoTask().getName()+" : ");
-//        instance.getDemoTask().printMe();
 
         StdSchedulerFactory stdSchedulerFactory = new StdSchedulerFactory();
         stdSchedulerFactory.initialize("quartz.properties");

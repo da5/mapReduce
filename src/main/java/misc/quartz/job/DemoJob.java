@@ -7,7 +7,7 @@ import org.quartz.JobExecutionException;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
 /**
- * Created by arindam on 20/1/17.
+ *  Created by arindam on 20/1/17.
  */
 public class DemoJob implements Job {
 
