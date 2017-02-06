@@ -16,7 +16,7 @@ public class Driver {
 
     public static void main(String[] args) throws Exception{
 
-        BufferedReader bufferedReader = new BufferedReader(new FileReader("/home/arindam/rawXml"));
+        BufferedReader bufferedReader = new BufferedReader(new FileReader("src/main/resources/response.xml"));
         StringBuilder stringBuilder = new StringBuilder();
         String inputLine = null;
         while((inputLine = bufferedReader.readLine())!=null){

@@ -1,0 +1,3250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<firewallConfiguration timestamp="1480541800532">
+    <contextId>globalroot-0</contextId>
+    <layer3Sections>
+        <section id="1034" name="a94a86da-8cbb-4c4f-a20d-29512e3ccc72" generationNumber="1485951534827" timestamp="1485951534827" type="LAYER3">
+            <rule id="1201" disabled="false" logged="false">
+                <name>Default Allow Rule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>a94a86da-8cbb-4c4f-a20d-29512e3ccc72</name>
+                        <value>securitygroup-21</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1034</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+                <tag>a94a86da-8cbb-4c4f-a20d-29512e</tag>
+            </rule>
+        </section>
+        <section id="1032" name="9a722a50-db30-4eb8-a07d-a298381aba86" generationNumber="1485983310683" timestamp="1485983310683" type="LAYER3">
+            <rule id="1205" disabled="false" logged="false">
+                <name>Icmp deny</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>9a722a50-db30-4eb8-a07d-a298381aba86</name>
+                        <value>securitygroup-20</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1032</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>vm1 (1b52a9a7-1fac-4120-8626-e89b3b0b64db)</name>
+                        <value>vm-3177</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>in</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1204" disabled="false" logged="false">
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>9a722a50-db30-4eb8-a07d-a298381aba86</name>
+                        <value>securitygroup-20</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1032</sectionId>
+                <direction>in</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1203" disabled="false" logged="false">
+                <name>Default Allow Rule</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vse-isaxena-edge2 (07ce6586-ef84-4600-bd0b-b624247c95fb)</name>
+                        <value>edge-226</value>
+                        <type>Edge</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                    <appliedTo>
+                        <name>vse-isaxena-edge1 (dbd2a97b-b149-4711-b424-2b4e4a7c5fe6)</name>
+                        <value>edge-224</value>
+                        <type>Edge</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1032</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>vm1 (1b52a9a7-1fac-4120-8626-e89b3b0b64db)</name>
+                        <value>vm-3177</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                    <source>
+                        <name>vm2 (f02207b4-b00a-43e9-b96e-283373477a9e)</name>
+                        <value>vm-3202</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1202" disabled="false" logged="false">
+                <name>Ishita&apos;s vmNic rule</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>9a722a50-db30-4eb8-a07d-a298381aba86</name>
+                        <value>securitygroup-20</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1032</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>vm2 (f02207b4-b00a-43e9-b96e-283373477a9e) - Network adapter 1</name>
+                        <value>503a7d89-59fc-d779-4c16-ff6061029a4c.000</value>
+                        <type>Vnic</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>vm1 (1b52a9a7-1fac-4120-8626-e89b3b0b64db) - Network adapter 1</name>
+                        <value>503a9f1b-7491-f9a4-ddf7-d6809c303cfc.000</value>
+                        <type>Vnic</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+        </section>
+        <section id="1030" name="4cfce3eb-99fe-4765-bdfc-11d5f72619dd" generationNumber="1485946189842" timestamp="1485946189842" type="LAYER3">
+            <rule id="1179" disabled="false" logged="false">
+                <name>yo</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>4cfce3eb-99fe-4765-bdfc-11d5f72619dd</name>
+                        <value>securitygroup-19</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1030</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>vm-1 (a50b6584-0eec-45dc-a4af-cb96e495630f) - Network adapter 1</name>
+                        <value>503a3873-ba23-1b99-475b-e94db253e5c9.000</value>
+                        <type>Vnic</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>vm1 (7440fc09-60cf-4990-b82b-f056989a01c5)</name>
+                        <value>vm-1540</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+        </section>
+        <section id="1028" name="a7f5ff07-1ab7-4321-8492-3ee5de5bb894" generationNumber="1483648757921" timestamp="1483648757921" type="LAYER3">
+            <rule id="1121" disabled="false" logged="false">
+                <name>IkesRule</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vse-Edge_DFW (d5659700-38c1-491b-a755-ab2155a34e8d)</name>
+                        <value>edge-254</value>
+                        <type>Edge</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1028</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <value>192.168.200.12</value>
+                        <type>Ipv4Address</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <services>
+                    <service>
+                        <isValid>true</isValid>
+                        <protocol>1</protocol>
+                        <protocolName>ICMP</protocolName>
+                    </service>
+                </services>
+                <direction>in</direction>
+                <packetType>ipv4</packetType>
+            </rule>
+            <rule id="1120" disabled="false" logged="false">
+                <name>Default Allow Rule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>a7f5ff07-1ab7-4321-8492-3ee5de5bb894</name>
+                        <value>securitygroup-18</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1028</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+        </section>
+        <section id="1026" name="vdc-109 (00944402-e16c-460f-9663-7639deb69d99)" generationNumber="1481224668985" timestamp="1481224668985" type="LAYER3">
+            <rule id="1113" disabled="false" logged="false">
+                <name>sample rule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vdc-109 (00944402-e16c-460f-9663-7639deb69d99)</name>
+                        <value>securitygroup-17</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1026</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1112" disabled="false" logged="false">
+                <name>sample rule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vdc-109 (00944402-e16c-460f-9663-7639deb69d99)</name>
+                        <value>securitygroup-17</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1026</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1111" disabled="false" logged="false">
+                <name>Default Allow Rule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vdc-109 (00944402-e16c-460f-9663-7639deb69d99)</name>
+                        <value>securitygroup-17</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1026</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+        </section>
+        <section id="1024" name="amrutOrgVdc1 (5c47f0ae-40a5-4495-ac9d-f9b5fc3c1818)" generationNumber="1480541800532" timestamp="1480541800532" type="LAYER3">
+            <rule id="1068" disabled="false" logged="false">
+                <name>ruleAppliedTo_vdc_icmp_allowapp</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrutOrgVdc1 (5c47f0ae-40a5-4495-ac9d-f9b5fc3c1818)</name>
+                        <value>securitygroup-16</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1024</sectionId>
+                <services>
+                    <service>
+                        <name>Data Recovery Appliance</name>
+                        <value>applicationgroup-1</value>
+                        <type>ApplicationGroup</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>Microsoft Active Directory</name>
+                        <value>applicationgroup-16</value>
+                        <type>ApplicationGroup</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1067" disabled="false" logged="false">
+                <name>ruleAppliedTo_vdc_icmp_application service</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrutOrgVdc1 (5c47f0ae-40a5-4495-ac9d-f9b5fc3c1818)</name>
+                        <value>securitygroup-16</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1024</sectionId>
+                <services>
+                    <service>
+                        <name>Data Recovery Appliance</name>
+                        <value>applicationgroup-1</value>
+                        <type>ApplicationGroup</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>Microsoft Active Directory</name>
+                        <value>applicationgroup-16</value>
+                        <type>ApplicationGroup</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1030" disabled="false" logged="false">
+                <name>Default Allow Rule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrutOrgVdc1 (5c47f0ae-40a5-4495-ac9d-f9b5fc3c1818)</name>
+                        <value>securitygroup-16</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1024</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+        </section>
+        <section id="1022" name="amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)" generationNumber="1485885838843" timestamp="1485885838843" type="LAYER3">
+            <rule id="1117" disabled="false" logged="false">
+                <name>s_d_vdc_L3</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm7_xx66.7 (ebdba26a-6a34-4a3b-adcc-e8342a8413c8)</name>
+                        <value>vm-1534</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1116" disabled="false" logged="false">
+                <name>s_d_vdc_L3</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1115" disabled="false" logged="false">
+                <name>s_d_vdc_L3</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1114" disabled="false" logged="false">
+                <name>vm nic rule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4) - Network adapter 1</name>
+                        <value>503a856e-c03c-30c2-21cc-4d0193c0520d.000</value>
+                        <type>Vnic</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm2_xx11.4 (a4a7e2d9-14cf-4495-9ffa-840c5b6f1972) - Network adapter 1</name>
+                        <value>503aa223-3707-1ac3-bbd0-8260a9d0e9f5.000</value>
+                        <type>Vnic</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1105" disabled="false" logged="false">
+                <name>s_d_E_ip6</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <value>fe80::250:56ff:fe01:e0</value>
+                        <type>Ipv6Address</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <value>fe80::250:56ff:fe01:2a0</value>
+                        <type>Ipv6Address</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>IPv6-ICMP Echo</name>
+                        <value>application-127</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1104" disabled="false" logged="false">
+                <name>s_d_E_ip6</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <value>fe80::250:56ff:fe01:e0</value>
+                        <type>Ipv6Address</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <value>fe80::250:56ff:fe01:2a0</value>
+                        <type>Ipv6Address</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>IPv6-ICMP Echo</name>
+                        <value>application-127</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1103" disabled="false" logged="false">
+                <name>s_d_E_VM</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <value>fe80::250:56ff:fe01:e0</value>
+                        <type>Ipv6Address</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <value>fe80::250:56ff:fe01:2a0</value>
+                        <type>Ipv6Address</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1102" disabled="false" logged="false">
+                <name>ip4-6</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <value>fe80::250:56ff:fe01:e0</value>
+                        <type>Ipv6Address</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <value>fe80::250:56ff:fe01:2a0</value>
+                        <type>Ipv6Address</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>IPv6-ICMP Echo</name>
+                        <value>application-127</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1101" disabled="false" logged="false">
+                <name>macset</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <value>192.168.66.2</value>
+                        <type>Ipv4Address</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <value>192.168.66.7</value>
+                        <type>Ipv4Address</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1100" disabled="false" logged="false">
+                <name>s_d_E_VM</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <value>192.168.66.2</value>
+                        <type>Ipv4Address</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <value>192.168.66.7</value>
+                        <type>Ipv4Address</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1099" disabled="false" logged="false">
+                <name>s_d_E_VM</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>ipxx66set</name>
+                        <value>ipset-2</value>
+                        <type>IPSet</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>ipset66dest</name>
+                        <value>ipset-3</value>
+                        <type>IPSet</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1098" disabled="false" logged="false">
+                <name>s_d_E_VM</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>ipxx66set</name>
+                        <value>ipset-2</value>
+                        <type>IPSet</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>ipset66dest</name>
+                        <value>ipset-3</value>
+                        <type>IPSet</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1097" disabled="false" logged="false">
+                <name>s_d_E_VM</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>ipxx66set</name>
+                        <value>ipset-2</value>
+                        <type>IPSet</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>ipset66dest</name>
+                        <value>ipset-3</value>
+                        <type>IPSet</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1085" disabled="false" logged="false">
+                <name>s_d_vdc_L3</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                    <source>
+                        <name>ipxx66set</name>
+                        <value>ipset-2</value>
+                        <type>IPSet</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                    <destination>
+                        <name>ipset66dest</name>
+                        <value>ipset-3</value>
+                        <type>IPSet</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1084" disabled="false" logged="false">
+                <name>s_d_vdc_L3</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1078" disabled="false" logged="false">
+                <name>s_d_vm</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1077" disabled="false" logged="false">
+                <name>s_d_vm</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1076" disabled="false" logged="false">
+                <name>s_d_vm</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1075" disabled="false" logged="false">
+                <name>s_d_VdcNetwork</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dvs.VCDVSlb_org2vdcnet_ad-a4ccfbd0-b655-412b-80e3-1b907b78e134</name>
+                        <value>virtualwire-41</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dvs.VCDVSlb_org2vdcnet_ad-a4ccfbd0-b655-412b-80e3-1b907b78e134</name>
+                        <value>virtualwire-41</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dvs.VCDVSipsec_orgvdcnet_adorg2-11891148-125b-4393-94b3-f995979dce4a</name>
+                        <value>virtualwire-46</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1074" disabled="false" logged="false">
+                <name>s_d_VdcNetwork</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dvs.VCDVSlb_org2vdcnet_ad-a4ccfbd0-b655-412b-80e3-1b907b78e134</name>
+                        <value>virtualwire-41</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dvs.VCDVSlb_org2vdcnet_ad-a4ccfbd0-b655-412b-80e3-1b907b78e134</name>
+                        <value>virtualwire-41</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dvs.VCDVSipsec_orgvdcnet_adorg2-11891148-125b-4393-94b3-f995979dce4a</name>
+                        <value>virtualwire-46</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1073" disabled="false" logged="false">
+                <name>s_d_VdcNetwork</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dvs.VCDVSlb_org2vdcnet_ad-a4ccfbd0-b655-412b-80e3-1b907b78e134</name>
+                        <value>virtualwire-41</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dvs.VCDVSlb_org2vdcnet_ad-a4ccfbd0-b655-412b-80e3-1b907b78e134</name>
+                        <value>virtualwire-41</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dvs.VCDVSipsec_orgvdcnet_adorg2-11891148-125b-4393-94b3-f995979dce4a</name>
+                        <value>virtualwire-46</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1072" disabled="false" logged="false">
+                <name>s_d_vdc</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dvs.VCDVSlb_org2vdcnet_ad-a4ccfbd0-b655-412b-80e3-1b907b78e134</name>
+                        <value>virtualwire-41</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1071" disabled="false" logged="false">
+                <name>s_d_vdc</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1070" disabled="false" logged="false">
+                <name>s_d_vdc</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1069" disabled="false" logged="false">
+                <name>vm_source_dest</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vse-ipsec_edge3_adorg2 (02586fa8-2931-4ac6-be4b-53d918aabe1a)</name>
+                        <value>edge-60</value>
+                        <type>Edge</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1066" disabled="false" logged="false">
+                <name>ruleAppliedTo_edge1_icmp_allow_take3</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vse-lb_adorg2_edge2 (f2922ff1-e54c-4bb0-9943-4c1ae4368520)</name>
+                        <value>edge-55</value>
+                        <type>Edge</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1065" disabled="false" logged="false">
+                <name>ruleAppliedTo_edge1_icmp_allow</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vse-lb_adorg2_edge2 (f2922ff1-e54c-4bb0-9943-4c1ae4368520)</name>
+                        <value>edge-55</value>
+                        <type>Edge</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1064" disabled="false" logged="false">
+                <name>ruleAppliedTo_edge1_icmp_allow</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vse-lb_adorg2_edge2 (f2922ff1-e54c-4bb0-9943-4c1ae4368520)</name>
+                        <value>edge-55</value>
+                        <type>Edge</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1063" disabled="false" logged="false">
+                <name>ruleAppliedTo_edge1_icmp_deny</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vse-lb_adorg2_edge2 (f2922ff1-e54c-4bb0-9943-4c1ae4368520)</name>
+                        <value>edge-55</value>
+                        <type>Edge</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1062" disabled="false" logged="false">
+                <name>ruleAppliedTo_edge1_icmp_allow</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vse-lb_adorg2_edge2 (f2922ff1-e54c-4bb0-9943-4c1ae4368520)</name>
+                        <value>edge-55</value>
+                        <type>Edge</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1061" disabled="false" logged="false">
+                <name>ruleAppliedTo_vm4_icmp_allow</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1060" disabled="false" logged="false">
+                <name>ruleAppliedTo_vm4_icmp_deny</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1059" disabled="false" logged="false">
+                <name>ruleAppliedTo_orgVdc_icmp_allow</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1056" disabled="false" logged="false">
+                <name>ruleAppliedTo_orgVdc_icmp_allow</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4) - Network adapter 3</name>
+                        <value>503a856e-c03c-30c2-21cc-4d0193c0520d.002</value>
+                        <type>Vnic</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1055" disabled="false" logged="false">
+                <name>ruleAppliedTo_orgVdc_icmp_allow</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4) - Network adapter 2</name>
+                        <value>503a856e-c03c-30c2-21cc-4d0193c0520d.001</value>
+                        <type>Vnic</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1054" disabled="false" logged="false">
+                <name>ruleAppliedTo_orgVdc_icmp_deny</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1053" disabled="false" logged="false">
+                <name>ruleAppliedTo_edge1_edgeOther_allow</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1051" disabled="false" logged="false">
+                <name>ruleAppliedTo_edge1_edgeOther_allow</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vse-lb_adorg2_edge2 (f2922ff1-e54c-4bb0-9943-4c1ae4368520)</name>
+                        <value>edge-55</value>
+                        <type>Edge</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1052" disabled="false" logged="false">
+                <name> icmp_dfw</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1050" disabled="false" logged="false">
+                <name>ruleAppliedTo_edge1_edgeOther_deny</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vse-lb_adorg2_edge2 (f2922ff1-e54c-4bb0-9943-4c1ae4368520)</name>
+                        <value>edge-55</value>
+                        <type>Edge</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1049" disabled="false" logged="false">
+                <name>ruleAppliedTo_edge1_deny</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vse-lb_adorg2_edge2 (f2922ff1-e54c-4bb0-9943-4c1ae4368520)</name>
+                        <value>edge-55</value>
+                        <type>Edge</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1048" disabled="false" logged="false">
+                <name>ruleAppliedTo_edge1_allow</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vse-lb_adorg2_edge2 (f2922ff1-e54c-4bb0-9943-4c1ae4368520)</name>
+                        <value>edge-55</value>
+                        <type>Edge</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1047" disabled="false" logged="false">
+                <name>ruleAppliedTo_orgVdcNet1_VM4_allow</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dvs.VCDVSlb_org2vdcnet_ad-a4ccfbd0-b655-412b-80e3-1b907b78e134</name>
+                        <value>virtualwire-41</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                    <appliedTo>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1046" disabled="false" logged="false">
+                <name>ruleAppliedTo_orgVdcNet1_VM4_deny</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dvs.VCDVSlb_org2vdcnet_ad-a4ccfbd0-b655-412b-80e3-1b907b78e134</name>
+                        <value>virtualwire-41</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                    <appliedTo>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1045" disabled="false" logged="false">
+                <name>ruleAppliedTo_orgVdcNet1_allow</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dvs.VCDVSlb_org2vdcnet_ad-a4ccfbd0-b655-412b-80e3-1b907b78e134</name>
+                        <value>virtualwire-41</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                    <appliedTo>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1044" disabled="false" logged="false">
+                <name>ruleAppliedTo_orgVdcNet1_allow</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dvs.VCDVSipsec_orgvdcnet_adorg2-11891148-125b-4393-94b3-f995979dce4a</name>
+                        <value>virtualwire-46</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                    <appliedTo>
+                        <name>dvs.VCDVSlb_org2vdcnet_ad-a4ccfbd0-b655-412b-80e3-1b907b78e134</name>
+                        <value>virtualwire-41</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1043" disabled="false" logged="false">
+                <name>ruleAppliedTo_orgVdcNet1_deny</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dvs.VCDVSipsec_orgvdcnet_adorg2-11891148-125b-4393-94b3-f995979dce4a</name>
+                        <value>virtualwire-46</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                    <appliedTo>
+                        <name>dvs.VCDVSlb_org2vdcnet_ad-a4ccfbd0-b655-412b-80e3-1b907b78e134</name>
+                        <value>virtualwire-41</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1042" disabled="false" logged="false">
+                <name>ruleAppliedTo_orgVdcNet1_deny</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dvs.VCDVSlb_org2vdcnet_ad-a4ccfbd0-b655-412b-80e3-1b907b78e134</name>
+                        <value>virtualwire-41</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1041" disabled="false" logged="false">
+                <name>ruleAppliedTo_orgVdcNet1</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dvs.VCDVSlb_org2vdcnet_ad-a4ccfbd0-b655-412b-80e3-1b907b78e134</name>
+                        <value>virtualwire-41</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1040" disabled="false" logged="false">
+                <name>ruleAppliedTo_VM2_VM4_allow</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                    <appliedTo>
+                        <name>dfw_vm2_xx11.4 (a4a7e2d9-14cf-4495-9ffa-840c5b6f1972)</name>
+                        <value>vm-1435</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1039" disabled="false" logged="false">
+                <name>ruleAppliedTo_VM2_VM4_deny</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                    <appliedTo>
+                        <name>dfw_vm2_xx11.4 (a4a7e2d9-14cf-4495-9ffa-840c5b6f1972)</name>
+                        <value>vm-1435</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1038" disabled="false" logged="false">
+                <name>ruleAppliedTo_VM4_deny</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1037" disabled="false" logged="false">
+                <name>ruleAppliedTo_VM4_deny</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1036" disabled="false" logged="false">
+                <name>ruleAppliedTo_vmxxx66-ipsecorgvdcnet_deny</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1035" disabled="false" logged="false">
+                <name>ruleAppliedTo_vmxxx66-ipsecorgvdcnet_deny</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1034" disabled="false" logged="false">
+                <name>ruleAppliedTo_dfw2xxx66-ipsecedge_deny</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1033" disabled="false" logged="false">
+                <name>ruleAppliedTo_dfw2xxx66-ipsecedge_deny</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1032" disabled="false" logged="false">
+                <name>ruleAppliedToamrut_orgVDC2_allow</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1031" disabled="false" logged="false">
+                <name>ruleAppliedToamrut_orgVDC2_deny</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1028" disabled="false" logged="false">
+                <name>ruleAppliedToamrut_orgVDC2_take2</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1027" disabled="false" logged="false">
+                <name>Default Allow Rule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1022</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+        </section>
+        <section id="1011" name="ccaffrey (47330521-8912-4424-b772-0508d0c355a6)-manual" generationNumber="1480541800532" timestamp="1480541800532" type="LAYER3">
+            <rule id="1014" disabled="false" logged="false">
+                <name> manual-DFW-rule-l3</name>
+                <action>reject</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>DISTRIBUTED_FIREWALL</name>
+                        <value>DISTRIBUTED_FIREWALL</value>
+                        <type>DISTRIBUTED_FIREWALL</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1011</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>ccaffrey (47330521-8912-4424-b772-0508d0c355a6)-manual</name>
+                        <value>securitygroup-10</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+        </section>
+        <section id="1010" name="Default Section Layer3" generationNumber="1480541800532" timestamp="1480541800532" type="LAYER3">
+            <rule id="1012" disabled="false" logged="false">
+                <name>Default Rule NDP</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>DISTRIBUTED_FIREWALL</name>
+                        <value>DISTRIBUTED_FIREWALL</value>
+                        <type>DISTRIBUTED_FIREWALL</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1010</sectionId>
+                <services>
+                    <service>
+                        <name>IPv6-ICMP Neighbor Advertisement</name>
+                        <value>application-26</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>IPv6-ICMP Neighbor Solicitation</name>
+                        <value>application-287</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1011" disabled="false" logged="false">
+                <name>Default Rule DHCP</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>DISTRIBUTED_FIREWALL</name>
+                        <value>DISTRIBUTED_FIREWALL</value>
+                        <type>DISTRIBUTED_FIREWALL</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1010</sectionId>
+                <services>
+                    <service>
+                        <name>DHCP-Server</name>
+                        <value>application-262</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>DHCP-Client</name>
+                        <value>application-18</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1010" disabled="false" logged="false">
+                <name>Default Rule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>DISTRIBUTED_FIREWALL</name>
+                        <value>DISTRIBUTED_FIREWALL</value>
+                        <type>DISTRIBUTED_FIREWALL</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1010</sectionId>
+                <precedence>default</precedence>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+        </section>
+    </layer3Sections>
+    <layer2Sections>
+        <section id="1033" name="a94a86da-8cbb-4c4f-a20d-29512e3ccc72" generationNumber="1485951534627" timestamp="1485951534627" type="LAYER2">
+            <rule id="1200" disabled="false" logged="false">
+                <name>Default Allow Rule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>a94a86da-8cbb-4c4f-a20d-29512e3ccc72</name>
+                        <value>securitygroup-21</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1033</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+                <tag>a94a86da-8cbb-4c4f-a20d-29512e</tag>
+            </rule>
+        </section>
+        <section id="1031" name="9a722a50-db30-4eb8-a07d-a298381aba86" generationNumber="1485792352334" timestamp="1485792352334" type="LAYER2">
+            <rule id="1124" disabled="false" logged="false">
+                <name>Default Allow Rule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>9a722a50-db30-4eb8-a07d-a298381aba86</name>
+                        <value>securitygroup-20</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1031</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+                <tag>9a722a50-db30-4eb8-a07d-a29838</tag>
+            </rule>
+        </section>
+        <section id="1029" name="4cfce3eb-99fe-4765-bdfc-11d5f72619dd" generationNumber="1485947950474" timestamp="1485947950474" type="LAYER2">
+            <rule id="1199" disabled="false" logged="false">
+                <name>enablerule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vm-1 (a50b6584-0eec-45dc-a4af-cb96e495630f)</name>
+                        <value>vm-1503</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1029</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>4cfce3eb-99fe-4765-bdfc-11d5f72619dd:vm1 macset</name>
+                        <value>macset-4</value>
+                        <type>MACSet</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>vm2 (91027b65-c487-4ebe-9288-6e17ee82d059)</name>
+                        <value>vm-1541</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1198" disabled="false" logged="false">
+                <name>yo2</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>4cfce3eb-99fe-4765-bdfc-11d5f72619dd</name>
+                        <value>securitygroup-19</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1029</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>4cfce3eb-99fe-4765-bdfc-11d5f72619dd:vm1 macset</name>
+                        <value>macset-4</value>
+                        <type>MACSet</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dvs.VCDVSabhi-org-vdc-nw-81bd2ed1-4c70-42b3-a3df-28691bd644a5</name>
+                        <value>virtualwire-228</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+        </section>
+        <section id="1027" name="a7f5ff07-1ab7-4321-8492-3ee5de5bb894" generationNumber="1483648419686" timestamp="1483648419686" type="LAYER2">
+            <rule id="1118" disabled="false" logged="false">
+                <name>Default Allow Rule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>a7f5ff07-1ab7-4321-8492-3ee5de5bb894</name>
+                        <value>securitygroup-18</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1027</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+        </section>
+        <section id="1025" name="vdc-109 (00944402-e16c-460f-9663-7639deb69d99)" generationNumber="1481224503145" timestamp="1481224503145" type="LAYER2">
+            <rule id="1110" disabled="false" logged="false">
+                <name>Default Allow Rule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vdc-109 (00944402-e16c-460f-9663-7639deb69d99)</name>
+                        <value>securitygroup-17</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1025</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+        </section>
+        <section id="1023" name="amrutOrgVdc1 (5c47f0ae-40a5-4495-ac9d-f9b5fc3c1818)" generationNumber="1480541800532" timestamp="1480541800532" type="LAYER2">
+            <rule id="1029" disabled="false" logged="false">
+                <name>Default Allow Rule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrutOrgVdc1 (5c47f0ae-40a5-4495-ac9d-f9b5fc3c1818)</name>
+                        <value>securitygroup-16</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1023</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+        </section>
+        <section id="1021" name="amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)" generationNumber="1480617140686" timestamp="1480617140686" type="LAYER2">
+            <rule id="1109" disabled="false" logged="false">
+                <name>s_d_macset_any</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>macsource</name>
+                        <value>macset-2</value>
+                        <type>MACSet</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>macdest</name>
+                        <value>macset-3</value>
+                        <type>MACSet</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>IPv6-ICMP Echo</name>
+                        <value>application-127</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1108" disabled="false" logged="false">
+                <name>s_d_macset_any</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>macsource</name>
+                        <value>macset-2</value>
+                        <type>MACSet</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>macdest</name>
+                        <value>macset-3</value>
+                        <type>MACSet</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>IPv6-ICMP Echo</name>
+                        <value>application-127</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1107" disabled="false" logged="false">
+                <name>s_d_macset</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>macsource</name>
+                        <value>macset-2</value>
+                        <type>MACSet</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>macdest</name>
+                        <value>macset-3</value>
+                        <type>MACSet</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>IPv6-ICMP Echo</name>
+                        <value>application-127</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1106" disabled="false" logged="false">
+                <name>s_d_macset</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>macsource</name>
+                        <value>macset-2</value>
+                        <type>MACSet</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>macdest</name>
+                        <value>macset-3</value>
+                        <type>MACSet</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>IPv6-ICMP Echo</name>
+                        <value>application-127</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1096" disabled="false" logged="false">
+                <name>macset</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>macsource</name>
+                        <value>macset-2</value>
+                        <type>MACSet</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>macdest</name>
+                        <value>macset-3</value>
+                        <type>MACSet</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1095" disabled="false" logged="false">
+                <name>s_d_E_VM</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1094" disabled="false" logged="false">
+                <name>s_d_E_VM</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dvs.VCDVSipsec_orgvdcnet_adorg2-11891148-125b-4393-94b3-f995979dce4a</name>
+                        <value>virtualwire-46</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1093" disabled="false" logged="false">
+                <name>s_d_E_VM</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dvs.VCDVSipsec_orgvdcnet_adorg2-11891148-125b-4393-94b3-f995979dce4a</name>
+                        <value>virtualwire-46</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1092" disabled="false" logged="false">
+                <name>s_d_vdc_L2</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dvs.VCDVSipsec_orgvdcnet_adorg2-11891148-125b-4393-94b3-f995979dce4a</name>
+                        <value>virtualwire-46</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1091" disabled="false" logged="false">
+                <name>s_d_vdc_L2</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dvs.VCDVSipsec_orgvdcnet_adorg2-11891148-125b-4393-94b3-f995979dce4a</name>
+                        <value>virtualwire-46</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1090" disabled="false" logged="false">
+                <name>s_d_vdc_L2</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1089" disabled="false" logged="false">
+                <name>s_d_vdc_L2</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1088" disabled="false" logged="false">
+                <name>s_d_vdc_L2</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1087" disabled="false" logged="false">
+                <name>s_d_vdc_L3</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>arp</name>
+                        <value>application-416</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1086" disabled="false" logged="false">
+                <name>s_d_vdc_L3</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1083" disabled="false" logged="false">
+                <name>s_d_vdc</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1082" disabled="false" logged="false">
+                <name>s_d_E</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dvs.VCDVSipsec_orgvdcnet_adorg2-11891148-125b-4393-94b3-f995979dce4a</name>
+                        <value>virtualwire-46</value>
+                        <type>VirtualWire</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1081" disabled="false" logged="false">
+                <name>s_d_vm</name>
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vse-ipsec_edge3_adorg2 (02586fa8-2931-4ac6-be4b-53d918aabe1a)</name>
+                        <value>edge-60</value>
+                        <type>Edge</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1080" disabled="false" logged="false">
+                <name>s_d_vm</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>vse-ipsec_edge3_adorg2 (02586fa8-2931-4ac6-be4b-53d918aabe1a)</name>
+                        <value>edge-60</value>
+                        <type>Edge</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1079" disabled="false" logged="false">
+                <name>s_d_vm</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>dfw_vm3_xx66.2 (b8a72686-bf46-4d0e-9086-6d12829aa61a)</name>
+                        <value>vm-556</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <destinations excluded="false">
+                    <destination>
+                        <name>dfw_vm4_xx66.3 (870b7c67-2969-4cdc-a385-e7aa3471cec4)</name>
+                        <value>vm-1437</value>
+                        <type>VirtualMachine</type>
+                        <isValid>true</isValid>
+                    </destination>
+                </destinations>
+                <services>
+                    <service>
+                        <name>ICMP Echo</name>
+                        <value>application-89</value>
+                        <type>Application</type>
+                        <isValid>true</isValid>
+                    </service>
+                </services>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+            <rule id="1026" disabled="false" logged="false">
+                <name>Default Allow Rule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>amrut_orgVDC2 (90dbcf2e-6837-43bb-b9fe-cc426f7c90dd)</name>
+                        <value>securitygroup-15</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1021</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+        </section>
+        <section id="1012" name="ccaffrey (47330521-8912-4424-b772-0508d0c355a6)-manual-l2" generationNumber="1480541800532" timestamp="1480541800532" type="LAYER2">
+            <rule id="1015" disabled="false" logged="false">
+                <action>deny</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>DISTRIBUTED_FIREWALL</name>
+                        <value>DISTRIBUTED_FIREWALL</value>
+                        <type>DISTRIBUTED_FIREWALL</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1012</sectionId>
+                <sources excluded="false">
+                    <source>
+                        <name>ccaffrey (47330521-8912-4424-b772-0508d0c355a6)-manual</name>
+                        <value>securitygroup-10</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </source>
+                </sources>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+        </section>
+        <section id="1008" name="Default Section Layer2" generationNumber="1480541800532" timestamp="1480541800532" type="LAYER2">
+            <rule id="1013" disabled="false" logged="false">
+                <name>Default Rule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>DISTRIBUTED_FIREWALL</name>
+                        <value>DISTRIBUTED_FIREWALL</value>
+                        <type>DISTRIBUTED_FIREWALL</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1008</sectionId>
+                <precedence>default</precedence>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+            </rule>
+        </section>
+    </layer2Sections>
+    <layer3RedirectSections>
+        <section id="1009" name="Default Section" generationNumber="1480541800532" timestamp="1480541800532" type="L3REDIRECT"/>
+    </layer3RedirectSections>
+    <generationNumber>1485983310683</generationNumber>
+</firewallConfiguration>
