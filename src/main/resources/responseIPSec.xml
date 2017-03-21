@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipsecStatusAndStats>
+    <siteStatistics>
+        <ikeStatus>
+            <channelStatus>down</channelStatus>
+            <channelState>STATE_MAIN_I1 (sent MI1, expecting MR1)</channelState>
+            <lastInformationalMessage></lastInformationalMessage>
+            <localIpAddress>10.152.43.30</localIpAddress>
+            <peerId>10.152.43.31</peerId>
+            <peerIpAddress>10.152.43.31</peerIpAddress>
+            <localSubnets>
+                <string>192.168.2.0/24</string>
+            </localSubnets>
+            <peerSubnets>
+                <string>192.168.4.0/24</string>
+            </peerSubnets>
+        </ikeStatus>
+        <tunnelStats>
+            <tunnelStatus>down</tunnelStatus>
+            <lastInformationalMessage></lastInformationalMessage>
+            <localSubnet>192.168.2.0/24</localSubnet>
+            <peerSubnet>192.168.4.0/24</peerSubnet>
+        </tunnelStats>
+    </siteStatistics>
+    <siteStatistics>
+        <ikeStatus>
+            <channelStatus>down</channelStatus>
+            <channelState>STATE_MAIN_I1 (sent MI1, expecting MR1)</channelState>
+            <lastInformationalMessage> initiating Main Mode</lastInformationalMessage>
+            <localIpAddress>10.152.43.30</localIpAddress>
+            <peerId>10.152.43.36</peerId>
+            <peerIpAddress>10.152.43.36</peerIpAddress>
+            <localSubnets>
+                <string>192.168.3.0/24</string>
+            </localSubnets>
+            <peerSubnets>
+                <string>192.168.4.0/24</string>
+            </peerSubnets>
+        </ikeStatus>
+        <tunnelStats>
+            <tunnelStatus>down</tunnelStatus>
+            <lastInformationalMessage> initiating Main Mode</lastInformationalMessage>
+            <localSubnet>192.168.3.0/24</localSubnet>
+            <peerSubnet>192.168.4.0/24</peerSubnet>
+        </tunnelStats>
+    </siteStatistics>
+    <timeStamp>1487591310</timeStamp>
+</ipsecStatusAndStats>

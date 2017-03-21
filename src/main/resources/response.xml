@@ -2,6 +2,24 @@
 <firewallConfiguration timestamp="1480541800532">
     <contextId>globalroot-0</contextId>
     <layer3Sections>
+        <section id="1036" name="81b02a50-d773-49c5-8c73-3c71ed6020b3" generationNumber="1486112956888" timestamp="1486112956888" type="LAYER3">
+            <rule id="1207" disabled="false" logged="false">
+                <name>Default Allow Rule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>81b02a50-d773-49c5-8c73-3c71ed6020b3</name>
+                        <value>securitygroup-22</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1036</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+                <tag>81b02a50-d773-49c5-8c73-3c71ed</tag>
+            </rule>
+        </section>
         <section id="1034" name="a94a86da-8cbb-4c4f-a20d-29512e3ccc72" generationNumber="1485951534827" timestamp="1485951534827" type="LAYER3">
             <rule id="1201" disabled="false" logged="false">
                 <name>Default Allow Rule</name>
@@ -2128,6 +2146,24 @@
         </section>
     </layer3Sections>
     <layer2Sections>
+        <section id="1035" name="81b02a50-d773-49c5-8c73-3c71ed6020b3" generationNumber="1486112956706" timestamp="1486112956706" type="LAYER2">
+            <rule id="1206" disabled="false" logged="false">
+                <name>Default Allow Rule</name>
+                <action>allow</action>
+                <appliedToList>
+                    <appliedTo>
+                        <name>81b02a50-d773-49c5-8c73-3c71ed6020b3</name>
+                        <value>securitygroup-22</value>
+                        <type>SecurityGroup</type>
+                        <isValid>true</isValid>
+                    </appliedTo>
+                </appliedToList>
+                <sectionId>1035</sectionId>
+                <direction>inout</direction>
+                <packetType>any</packetType>
+                <tag>81b02a50-d773-49c5-8c73-3c71ed</tag>
+            </rule>
+        </section>
         <section id="1033" name="a94a86da-8cbb-4c4f-a20d-29512e3ccc72" generationNumber="1485951534627" timestamp="1485951534627" type="LAYER2">
             <rule id="1200" disabled="false" logged="false">
                 <name>Default Allow Rule</name>
@@ -3246,5 +3282,5 @@
     <layer3RedirectSections>
         <section id="1009" name="Default Section" generationNumber="1480541800532" timestamp="1480541800532" type="L3REDIRECT"/>
     </layer3RedirectSections>
-    <generationNumber>1485983310683</generationNumber>
+    <generationNumber>1486112956888</generationNumber>
 </firewallConfiguration>

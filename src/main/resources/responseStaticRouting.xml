@@ -1,0 +1,28 @@
+<staticRouting>
+    <defaultRoute>
+        <vnic>0</vnic>
+        <mtu>1500</mtu>
+        <gatewayAddress>10.152.43.253</gatewayAddress>
+        <adminDistance>1</adminDistance>
+    </defaultRoute>
+    <staticRoutes>
+        <route>
+            <mtu>1500</mtu>
+            <description>route-1</description>
+            <type>user</type>
+            <vnic>0</vnic>
+            <network>10.152.43.31/32</network>
+            <nextHop>10.152.43.34</nextHop>
+            <adminDistance>1</adminDistance>
+        </route>
+        <route>
+            <mtu>1500</mtu>
+            <description>route-2</description>
+            <type>user</type>
+            <vnic>0</vnic>
+            <network>10.152.143.131/32</network>
+            <nextHop>10.152.143.134</nextHop>
+            <adminDistance>1</adminDistance>
+        </route>
+    </staticRoutes>
+</staticRouting>
